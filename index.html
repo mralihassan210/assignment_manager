@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Student Task Manager</h1>
+      <p class="subtitle">Plan your coursework, one task at a time.</p>
+    </header>
+
+    <!-- Task form (feature/task-form) -->
+    <section class="panel" aria-labelledby="form-heading">
+      <h2 id="form-heading">Add a task</h2>
+      <form id="task-form" autocomplete="off">
+        <label for="task-title">Title</label>
+        <input type="text" id="task-title" placeholder="e.g. Finish Git assignment" required />
+
+        <label for="task-description">Description</label>
+        <textarea id="task-description" rows="3" placeholder="Optional details"></textarea>
+
+        <button type="submit" class="btn btn-primary">Add task</button>
+      </form>
+    </section>
+
+    <!-- Task list + search (feature/task-search) -->
+    <section class="panel" aria-labelledby="list-heading">
+      <div class="list-header">
+        <h2 id="list-heading">Your tasks</h2>
+        <span id="task-count" class="count">0 tasks</span>
+      </div>
+
+      <input type="search" id="search-input" placeholder="Search tasks" aria-label="Search tasks" />
+
+      <ul id="task-list" class="task-list"></ul>
+      <p id="empty-message" class="empty">No tasks yet. Add your first task above.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
