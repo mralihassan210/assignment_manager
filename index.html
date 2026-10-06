@@ -1,43 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Task Manager</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="app">
-    <header class="app-header">
+  <main class="container">
+    <header>
       <h1>Student Task Manager</h1>
-      <p class="subtitle">Plan your coursework, one task at a time.</p>
+      <p>Plan your assignments and never miss a deadline.</p>
     </header>
 
-    <!-- Task form (feature/task-form) -->
-    <section class="panel" aria-labelledby="form-heading">
-      <h2 id="form-heading">Add a task</h2>
-      <form id="task-form" autocomplete="off">
-        <label for="task-title">Title</label>
-        <input type="text" id="task-title" placeholder="e.g. Finish Git assignment" required />
+    <section class="card">
+      <h2>Add New Task</h2>
+      <form id="task-form">
+        <label for="task-title">Task Title</label>
+        <input type="text" id="task-title" placeholder="e.g. Complete Git assignment" required>
 
-        <label for="task-description">Description</label>
-        <textarea id="task-description" rows="3" placeholder="Optional details"></textarea>
+        <label for="task-desc">Description</label>
+        <textarea id="task-desc" rows="3" placeholder="Write some details..."></textarea>
 
-        <button type="submit" class="btn btn-primary">Add task</button>
+        <button type="submit" id="add-btn">Add Task</button>
       </form>
     </section>
 
-    <!-- Task list + search (feature/task-search) -->
-    <section class="panel" aria-labelledby="list-heading">
-      <div class="list-header">
-        <h2 id="list-heading">Your tasks</h2>
-        <span id="task-count" class="count">0 tasks</span>
-      </div>
-
-      <input type="search" id="search-input" placeholder="Search tasks" aria-label="Search tasks" />
-
-      <ul id="task-list" class="task-list"></ul>
-      <p id="empty-message" class="empty">No tasks yet. Add your first task above.</p>
+    <section class="card">
+      <h2>My Tasks</h2>
+      <ul id="task-list"></ul>
+      <p id="empty-msg">No tasks yet. Add your first task above.</p>
     </section>
   </main>
 
