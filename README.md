@@ -1,2 +1,2 @@
 # assignment_manager
-A simple web app to add, search, complete and delete tasks
+A simple Student Task Management System to add, search, complete and delete tasks
