@@ -13,6 +13,7 @@ public/hot
 
 # Laravel 5 & Lumen specific with changed public path
 public_html/storage
+temp_auto_push.bat
 public_html/hot
 
 storage/*.key
@@ -29,3 +30,5 @@ Homestead.json
 .env.production
 .phpactor.json
 auth.json
+.gitignore
+branch_structure.json
